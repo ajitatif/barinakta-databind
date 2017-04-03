@@ -1,14 +1,18 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app.routing.module';
+
 import { AppComponent }  from './app.component';
 import { MainComponent } from './admin/main.component';
 import { AdminNavigationComponent } from './admin/navigation.component';
 import { LandingComponent } from './landing.component';
 
+import { AnimalFriendManagementComponent } from './admin/animal-friend/animal-friend-management.component';
+
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent, MainComponent, AdminNavigationComponent, LandingComponent ],
+  imports:      [ BrowserModule, AppRoutingModule ],
+  declarations: [ AppComponent, MainComponent, AdminNavigationComponent, LandingComponent, AnimalFriendManagementComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

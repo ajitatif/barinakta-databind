@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
     template:
     `<div id="wrapper">
         <admin-nav></admin-nav>
-        <admin-main></admin-main>
+        <div id="page-wrapper">
+            <router-outlet>
+            </router-outlet>
+        </div>
     </div>`
 })
 export class LandingComponent {}
