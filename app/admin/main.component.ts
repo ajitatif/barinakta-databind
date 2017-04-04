@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'admin-main',
     moduleId: module.id,
-    templateUrl: '../../ui/admin/main.html'
+    templateUrl: './main.component.html'
 })
 export class MainComponent {
 

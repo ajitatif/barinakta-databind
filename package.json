@@ -2,12 +2,9 @@
   "name": "barinakta-ui",
   "version": "0.0.1",
   "description": "A search app for our friends in shelter, the İstanbul JUG Workshop starter. Based on Angular's Quickstart",
-  "watch": {
-    "ui": "app/ts/**/*.{html,css}"
-  },
   "scripts": {
     "ui": "copyfiles -u 2 app/ts/**/*.html app/ts/**/*.css app/js/",
-    "start": "npm run ui && tsc && concurrently \"tsc -w\" \"lite-server\" \"npm run watch\" ",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
@@ -15,8 +12,7 @@
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "watch": "npm-watch"
+    "tsc:w": "tsc -w"
   },
   "keywords": [],
   "author": "",

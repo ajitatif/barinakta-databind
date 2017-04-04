@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app.routing.module';
 
@@ -11,7 +12,7 @@ import { LandingComponent } from './landing.component';
 import { AnimalFriendManagementComponent } from './admin/animal-friend/animal-friend-management.component';
 
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule ],
+  imports:      [ BrowserModule, AppRoutingModule, HttpModule ],
   declarations: [ AppComponent, MainComponent, AdminNavigationComponent, LandingComponent, AnimalFriendManagementComponent ],
   bootstrap:    [ AppComponent ]
 })

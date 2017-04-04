@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'barinakta-app',
   moduleId: module.id,
-  templateUrl: '../ui/app.html',
+  templateUrl: 'app.component.html',
 })
 export class AppComponent  { }

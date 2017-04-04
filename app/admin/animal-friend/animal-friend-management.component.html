@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Barınak</th>
+                        <th>Adı</th>
+                        <th>Cinsi</th>
+                        <th>Yaşı</th>
+                        <th>Durumu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let friend of animalFriends">
+                        <td>friend.shelter.name</td>
+                        <td>friend.name</td>
+                        <td>friend.breed.name</td>
+                        <td>friend.age</td>
+                        <td>friend.status</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

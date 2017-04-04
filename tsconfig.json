@@ -8,10 +8,9 @@
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "outDir":  "app/js"
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
-    "app/ts/**/*"
+    "app/**/*"
   ]
 }
