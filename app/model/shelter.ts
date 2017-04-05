@@ -10,7 +10,10 @@ export class Shelter {
 
     public static fromResponseModel(responseModel: any): Shelter {
 
-        return new Shelter(responseModel.name, responseModel.address, responseModel.phone,
+        if (!!responseModel) {
+            return new Shelter(responseModel.name, responseModel.address, responseModel.phone,
                             responseModel.gisCoordinates, responseModel.phone);
+        }
+        return null;
     }
 }

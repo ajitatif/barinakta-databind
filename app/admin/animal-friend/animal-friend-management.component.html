@@ -13,11 +13,11 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let friend of animalFriends">
-                        <td>friend.shelter.name</td>
-                        <td>friend.name</td>
-                        <td>friend.breed.name</td>
-                        <td>friend.age</td>
-                        <td>friend.status</td>
+                        <td> {{ friend.shelter?.name }}</td>
+                        <td>{{ friend.name }} </td>
+                        <td>{{ friend.breed?.name }}</td>
+                        <td>{{ friend.age }}</td>
+                        <td>{{ friend.status }}</td>
                     </tr>
                 </tbody>
             </table>
