@@ -16,16 +16,13 @@ export class AnimalFriendService {
 
     public getAnimalFriends(): Observable<AnimalFriend[]> {
 
-        return this.http.get(`${Constants.apiUrlBase}/animalFriends`).map(
-                response => this.mapAnimalFriend(response.json()._embedded.animalFriends));
+        return this.http.get(`${Constants.apiUrlBase}/animalFriends?projection=animal_friend`).map(
+               response => this.mapAnimalFriend(response.json()._embedded.animalFriends));
     }
 
     private mapAnimalFriend(data: any): AnimalFriend[] {
 
         let animalFriends = AnimalFriend.fromResponseModelList(data);
-//        if (!!animalFriend._links.breed) {
-//            let breed = Breed.fromResponseModel()
-//        }
         return animalFriends;
     }
 }
