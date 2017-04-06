@@ -1,6 +1,7 @@
 export class Shelter {
 
     private constructor(
+        public id: number,
         public name: string,
         public address: string,
         public phone: string,
@@ -11,7 +12,7 @@ export class Shelter {
     public static fromResponseModel(responseModel: any): Shelter {
 
         if (!!responseModel) {
-            return new Shelter(responseModel.name, responseModel.address, responseModel.phone,
+            return new Shelter(responseModel.id, responseModel.name, responseModel.address, responseModel.phone,
                             responseModel.gisCoordinates, responseModel.phone);
         }
         return null;

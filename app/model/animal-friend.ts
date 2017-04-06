@@ -4,6 +4,7 @@ import { Breed } from './breed';
 export class AnimalFriend {
 
     private constructor(
+        public id: number,
         public name: string,
         public shelter: Shelter,
         public breed: Breed,
@@ -16,7 +17,7 @@ export class AnimalFriend {
     public static fromResponseModel(responseModel: any): AnimalFriend {
 
         if (!!responseModel) {
-            return new AnimalFriend(responseModel.name, Shelter.fromResponseModel(responseModel.shelter),
+            return new AnimalFriend(responseModel.id, responseModel.name, Shelter.fromResponseModel(responseModel.shelter),
                                     Breed.fromResponseModel(responseModel.breed), responseModel.age,
                                     responseModel.photo, responseModel.bio, responseModel.status);
         }
