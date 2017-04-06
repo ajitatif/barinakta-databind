@@ -5,25 +5,25 @@
     <form *ngIf="!!animalFriend && !!availableBreeds" (ngSubmit)="onSubmit()" #theForm="ngForm">
         <div class="panel-body">
             <div class="form-group">
-                <label for="breed">Cinsi:</label>
+                <label class="control-label" for="breed">Cinsi:</label>
                 <select id="breed" name="breed" class="form-control" [(ngModel)]="animalFriend.breed" required #breed="ngModel">
                     <option *ngFor="let breed of availableBreeds" [ngValue]="breed">{{ breed.name }}</option>
                 </select>
             </div>
-            <div class="form-group" [class.has-errors]="!name.valid">
-                <label for="name">Adı:</label>
+            <div class="form-group" [class.has-error]="!name.valid">
+                <label class="control-label" for="name">Adı:</label>
                 <input type="text" id="name" name="name" class="form-control" [(ngModel)]="animalFriend.name" required #name="ngModel" />
             </div>
             <div class="form-group" [class.has-error]="!age.valid">
-                <label for="age">Yaşı:</label>
+                <label class="control-label" for="age">Yaşı:</label>
                 <input type="number" min="0" max="100" id="age" name="age" class="form-control" [(ngModel)]="animalFriend.age" required #age="ngModel"/>
             </div>
             <div class="form-group">
-                <label for="bio">Özgeçmiş:</label>
+                <label class="control-label" for="bio">Özgeçmiş:</label>
                 <textarea cols="80" rows="5" id="bio" name="bio" class="form-control" [(ngModel)]="animalFriend.bio"></textarea>
             </div>
             <div class="form-group">
-                <label for="status">Durum:</label>
+                <label class="control-label" for="status">Durum:</label>
                 <select id="status" name="status" class="form-control" [(ngModel)]="animalFriend.status">
                     <option value="LOOKING_FOR_HOME">Ev Arıyor</option>
                     <option value="ADOPTED">Sahiplenildi</option>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="panel-footer">
-            <button type="submit" [class.disabled]="!theForm.valid" class="btn btn-success">Kaydet</button>
+            <button type="submit" [disabled]="!theForm.valid || theForm.pristine" class="btn btn-success">Kaydet</button>
             <button type="button" (click)="navigateBack()" class="btn btn-default">İptal</button>
         </div>
     </form>
