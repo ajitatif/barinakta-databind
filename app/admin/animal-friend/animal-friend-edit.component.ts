@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute , Params } from '@angular/router';
 
 import { AnimalFriendService } from '../../service/animal-friend.service';
@@ -19,6 +19,9 @@ export class AnimalFriendEditComponent {
     private animalFriend: AnimalFriend;
 
     private availableBreeds: Breed[] = [];
+
+    @ViewChild('theForm')
+    private theForm;
 
     constructor(private route: ActivatedRoute, private router: Router, private animalFriendService: AnimalFriendService) {
     }
@@ -42,6 +45,7 @@ export class AnimalFriendEditComponent {
     }
 
     private navigateBack() {
+        console.log(`Forma dokunuldu mu ? ${this.theForm.touched}`);
         this.router.navigate(['/animal-friend']);
     }
 }

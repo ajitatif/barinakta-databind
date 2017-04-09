@@ -13,8 +13,8 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let friend of animalFriends">
-                        <td><a [routerLink]="['/animal-friend', friend.id]">{{ friend.shelter?.name }}</a></td>
-                        <td>{{ friend.name }} </td>
+                        <td>{{ friend.shelter?.name }}</td>
+                        <td><a [routerLink]="['/animal-friend', friend.id]">{{ friend.name }}</a></td>
                         <td>{{ friend.breed?.name }}</td>
                         <td>{{ friend.age }}</td>
                         <td>{{ friend.status }}</td>
